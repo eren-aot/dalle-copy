@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-    apiKey: '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', // Replace with your OpenAI API key
+    apiKey: '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', // Replace with your OpenAI API key
 });
 
 export async function POST(request : Request) {
@@ -24,7 +24,8 @@ export async function POST(request : Request) {
           });
       
         //   res.json({ data: image.data });
-        return NextResponse.json({image : image.data});
+        console.log(image)
+        return NextResponse.json(image.data);
 
         
     } catch (error) {
